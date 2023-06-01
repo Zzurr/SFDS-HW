@@ -1,5 +1,4 @@
-# My Data Science projects
-
+# Мy Homework projects for Skillfactory (science course)
 From the [SkillFactory Data science course](https://apps.skillfactory.ru/)
 
 ## Проекты
