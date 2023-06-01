@@ -1,9 +1,5 @@
-def check() -> int:
-    """_summary_
-
-    Returns:
-        int: _description_
-    """
+def check():
+    
     import numpy as np
 
     # задаем базовые значения:  
@@ -15,14 +11,18 @@ def check() -> int:
 
     while True:
         count += 1
-        if predict_number > number:
+        if predict_number > number:   
+            # если предлагаемое число больше искомого, то за максимум интервала берем предлагаемое число 
             max_number = predict_number
+            # новое предлагаемое число будет посередине между предыдущей попыткой и минимумом
             predict_number = predict_number - int((predict_number - min_number) * 0.5)
         elif predict_number < number:
+            # если предлагаемое число меньше искомого, то за минимум интервала берем предлагаемое число 
             min_number = predict_number
+            # новое предлагаемое число будет посередине между предыдущей попыткой и максимумом
             predict_number = predict_number + int((max_number - predict_number) *0.5)
         else:
             print(f"Вы угадали число! Это число = {number}, за {count} попыток")
             break
-    return None
-    
+    return count
+check()  
